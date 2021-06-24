@@ -1,10 +1,19 @@
-FROM couchbase/server:community-4.1.1
+FROM couchbase/server:community-6.5.1
 
-RUN apt-get update && \
-    apt-get install -y ufw
+ENV MEMORY_QUOTA 256
+ENV INDEX_MEMORY_QUOTA 256
+ENV FTS_MEMORY_QUOTA 256
 
-ADD start.sh /start.sh
-RUN chmod +x /start.sh
+ENV SERVICES "kv,n1ql,index,fts"
 
-ENTRYPOINT /start.sh
+ENV USERNAME "Administrator"
+ENV PASSWORD "password"
 
+ENV CLUSTER_HOST ""
+ENV CLUSTER_REBALANCE ""
+
+ADD start.sh /root/start.sh
+
+RUN chmod +x /root/start.sh
+
+ENTRYPOINT /root/start.sh
