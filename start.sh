@@ -1,7 +1,4 @@
 #! /bin/sh -
-ufw enable
-ufw deny 8091/tcp
-
 /entrypoint.sh couchbase-server &
 
 timeout 60 bash -c 'until echo > /dev/tcp/phpunit-couchbase/8091; do sleep 1; done'
@@ -26,7 +23,4 @@ curl -u Administrator:password -v -X POST \
   http://localhost:8091/pools/default/buckets \
   -d 'flushEnabled=1&threadsNumber=3&replicaIndex=0&replicaNumber=0&evictionPolicy=valueOnly&ramQuotaMB=597&bucketType=membase&name=default&authType=sasl&saslPassword='
 
-ufw disable
-
-sleep infinity
 
