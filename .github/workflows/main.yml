@@ -6,5 +6,9 @@ jobs:
     name: Lets chill on the couchbase
     steps:
       - name: Couchabase helper
+<<<<<<< HEAD
         uses: jycr753/couchbase-action@v1.2
+=======
+        uses: jycr753/couchbase-action@d29bd83690319f1e792533c2046b8cecc21c5aac
+>>>>>>> fa7303b (chore: update action)
   
