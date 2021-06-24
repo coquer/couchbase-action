@@ -1,0 +1,10 @@
+on: [push]
+
+jobs:
+  does-it-work:
+    runs-on: ubuntu-latest
+    name: Lets chill on the couchbase
+    steps:
+      - name: Couchabase helper
+        uses: jycr753/couchbase-action@v1.0
+  
