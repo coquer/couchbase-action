@@ -1,5 +1,10 @@
 name: 'Couchbase phpunit builder'
 description: 'Small helper to allow couchbase testing'
+
+branding:
+  icon: 'sunrise'  
+  color: 'red'
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
