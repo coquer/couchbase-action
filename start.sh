@@ -1,5 +1,5 @@
 #! /bin/sh -
-set -m
+set -e
 
 /entrypoint.sh couchbase-server &
 sleep 15
