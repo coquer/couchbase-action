@@ -24,5 +24,5 @@ curl -u Administrator:password -v -X POST \
   http://localhost:8091/pools/default/buckets \
   -d 'flushEnabled=1&threadsNumber=3&replicaIndex=0&replicaNumber=0&evictionPolicy=valueOnly&ramQuotaMB=597&bucketType=membase&name=default&authType=sasl&saslPassword='
 
-sleep infinity
-
+echo "success"
+exit 0
