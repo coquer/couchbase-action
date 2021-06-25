@@ -6,4 +6,4 @@ jobs:
     name: Lets chill on the couchbase
     steps:
       - name: Couchabase helper
-        uses: jycr753/couchbase-action@v1.4
+        uses: jycr753/couchbase-action@v1.5
