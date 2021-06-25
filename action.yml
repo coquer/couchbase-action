@@ -1,4 +1,4 @@
-name: 'Couchabase helper'
+name: 'Couchbase phpunit builder'
 description: 'Small helper to allow couchbase testing'
 runs:
   using: 'docker'

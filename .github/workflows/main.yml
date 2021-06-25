@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     name: Lets chill on the couchbase
     steps:
-      - name: Couchabase helper
+      - name: Couchbase phpunit builder
         uses: jycr753/couchbase-action@v1.5
